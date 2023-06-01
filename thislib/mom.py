@@ -37,7 +37,6 @@ def filter_cursiveURLCatcher(line:str, dump_list:list)->None:
 
 
 
-
 def singleLineURLCatcher(line:str, dump_list:list, filter)->None:
     """
     Extract all URLs that match the criteria from a single-line string
@@ -61,6 +60,8 @@ def URLFileCatcher(file_path:str, dump_list:list, filter)->None:
             else:
                 singleLineURLCatcher(line, dump_list, filter)
 
+
+# def cleaner_baseURLCleaner(url_list:list, )
 
 
 

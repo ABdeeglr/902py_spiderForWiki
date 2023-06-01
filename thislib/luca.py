@@ -7,9 +7,20 @@ def catcher_HTMLCatcher(page_URL:str, file_path:str, used_headers:dict)->None:
     """
     根据给出的 URL 获取 HTML 资源
 
-    >>> page_URL 网页资源地址
-    file_path 本地保存路径
+    page_URL 网页资源地址
+    file_path 本地保存路径, 包含完整文件名
     headers 请求头
+
+    Example:
+    >>> url = "https://azurlane.koumakan.jp/wiki/Centaur/Gallery"
+    fpath = "./data/html/Centaur.html"
+    used_headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57"
+    }
+
+    luca.catcher_HTMLCatcher(url, fpath, used_headers) downloads "Centaur.html" in "/data/html"
+    
+
     """
     ret = requests.get(page_URL, headers=used_headers)
 
